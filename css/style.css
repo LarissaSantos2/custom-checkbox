@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+/* reset css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* corpo da página */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(#100973, #495696);
+  font-family: "Poppins", sans-serif;
+  user-select: none;
+}
+
+/* container geral */
+.container {
+  width: 330px;
+  background-color: #ecf0f1;
+  border-radius: 20px;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h2 {
+  color: #08334f;
+  font-size: 18px;
+}
+
+/* grupo de configurações */
+.group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  font-weight: 600;
+}
+
+/* cada item com checkbox */
+.group .item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* checkbox estilizado */
+.group input[type="checkbox"] {
+  position: relative;
+  height: 18px;
+  width: 36px;
+  background-color: white;
+  outline: none;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  transition: 0.5s;
+}
+
+/* círculo interno */
+.group input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  transform: scale(0.85);
+  background: linear-gradient(#fff, #f2f2f2, #e6e6e6, #d9d9d9);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* marcado-selecionado pelo usuário */
+.group input[type="checkbox"]:checked {
+  background-color: #387cfa;
+}
+
+.group input[type="checkbox"]:checked::before {
+  left: 18px;
+}
